@@ -60,3 +60,7 @@ body {
 .counter-increase {
   color: #3f7d20;
 }
+
+.counter-decrease {
+  color: #ff0800;
+}
