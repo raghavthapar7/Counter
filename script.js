@@ -3,6 +3,7 @@
 let increaseBtn = document.querySelector(".increase");
 let counter = document.querySelector(".counter");
 let decreaseBtn = document.querySelector(".decrease");
+let resetBtn = document.querySelector(".reset");
 // console.log(counter);
 let counterNumber = 0;
 
@@ -20,4 +21,12 @@ decreaseBtn.addEventListener("click", function () {
   counter.textContent = counterNumber;
   counter.classList.remove("counter-increase");
   counter.classList.add("counter-decrease");
+});
+
+// Reset functionality
+resetBtn.addEventListener("click", function () {
+  counterNumber = 0;
+  counter.textContent = counterNumber;
+  counter.classList.remove("counter-increase");
+  counter.classList.remove("counter-decrease");
 });
