@@ -12,7 +12,7 @@ body {
   text-align: center;
   font-family: "Roboto", sans-serif;
   background-color: #f1f5f8;
-  color: #222;
+  color: #102a41;
 }
 
 .header {
@@ -21,4 +21,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* gap: 30px; */
+}
+
+.heading {
+  font-size: 80px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.counter {
+  font-size: 96px;
 }
