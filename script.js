@@ -7,26 +7,38 @@ let resetBtn = document.querySelector(".reset");
 // console.log(counter);
 let counterNumber = 0;
 
+let updateCounter = function () {
+  counter.textContent = counterNumber;
+};
+
+let checkCounterNumber = function () {
+  counter.classList.remove("counter-increase");
+  counter.classList.remove("counter-decrease");
+  if (counterNumber > 0) {
+    counter.classList.add("counter-increase");
+  }
+  if (counterNumber < 0) {
+    counter.classList.add("counter-decrease");
+  }
+};
+
 // Increase the number functionality
 increaseBtn.addEventListener("click", function () {
   counterNumber++;
-  counter.textContent = counterNumber;
-  counter.classList.remove("counter-decrease");
-  counter.classList.add("counter-increase");
+  updateCounter();
+  checkCounterNumber();
 });
 
 // Decrease the number functionality
 decreaseBtn.addEventListener("click", function () {
   counterNumber--;
-  counter.textContent = counterNumber;
-  counter.classList.remove("counter-increase");
-  counter.classList.add("counter-decrease");
+  updateCounter();
+  checkCounterNumber();
 });
 
 // Reset functionality
 resetBtn.addEventListener("click", function () {
   counterNumber = 0;
-  counter.textContent = counterNumber;
-  counter.classList.remove("counter-increase");
-  counter.classList.remove("counter-decrease");
+  updateCounter();
+  checkCounterNumber();
 });
