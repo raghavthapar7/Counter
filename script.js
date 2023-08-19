@@ -9,4 +9,5 @@ let counterNumber = 0;
 increaseBtn.addEventListener("click", function () {
   counterNumber++;
   counter.textContent = counterNumber;
+  counter.classList.add("counter-increase");
 });
